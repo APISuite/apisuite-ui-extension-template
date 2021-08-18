@@ -1,18 +1,23 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next'
-import config from 'helpers/config'
-import { EXT_NAME } from 'helpers/constants'
+
+import { useTranslation } from '@apisuite/fe-base'
 
 const AdditionalInfo: React.FC = () => {
-  const [t] = useTranslation(EXT_NAME)
+  const trans = useTranslation()
+
+  const t = (str: string, ...args) => {
+    return trans.t(`extensions.example.${str}`, ...args)
+  }
 
   return (
-    <div style={{ border: '1px solid #ccc', color: 'white' }}>
+    <div style={{ border: '1px solid #cccccc', color: 'white' }}>
       <h1>{t('homepage.extensionSection.title')}</h1>
+
       <p>{t('homepage.extensionSection.paragraph')}</p>
+
       <p>
         {t('homepage.extensionSection.configValue', {
-          value: config().someKey,
+          value: 'apiSuiteExtension12345!',
         })}
       </p>
     </div>

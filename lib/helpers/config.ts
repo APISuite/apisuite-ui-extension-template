@@ -1,4 +1,4 @@
-import baseConfig, { ExtensionConfig } from 'config'
+import baseConfig, { ExtensionConfig } from '../config'
 
 let values = {
   ...baseConfig,

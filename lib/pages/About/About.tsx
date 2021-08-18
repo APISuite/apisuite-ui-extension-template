@@ -3,13 +3,13 @@ import React from 'react'
 const About: React.FC = () => (
   <div
     style={{
-      minHeight: '100%',
       backgroundColor: 'burlywood',
+      minHeight: '100%',
       padding: '300px 16px 0 16px',
     }}
   >
-    <h1>About Extensions</h1>
-    <p>This page was dynamically added by an extensions.</p>
+    <h1>About extensions page</h1>
+    <p>This page was dynamically added by an extension!</p>
   </div>
 )
 
