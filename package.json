@@ -1,99 +1,96 @@
 {
-  "name": "apisuite-extension-ui-example",
+  "name": "@apisuite/apisuite-ui-extension-template",
   "version": "1.0.2",
   "main": "build/index.js",
-  "module": "build/index.esm.js",
   "files": [
     "build"
   ],
-  "types": "build/src/index.d.ts",
-  "description": "A skeleton to create your own React component library using Rollup, TypeScript and Sass",
+  "types": "build/index.d.ts",
+  "description": "A template to create your own UI Extensions for API Suite's Portal.",
+  "watch": {
+    "build": {
+      "patterns": [
+        "lib"
+      ],
+      "extensions": "ts,tsx,scss,json",
+      "ignore": "lib/constants/info.ts",
+      "quiet": false
+    }
+  },
   "scripts": {
-    "format": "prettier --write \"src/{,**/}*.ts{,x}\"",
-    "lint": "tsc --noEmit && eslint \"src/{,**/}*.ts{,x}\"",
-    "build": "rollup -c",
-    "build:watch": "rollup -w -c",
-    "version": "npm run build",
+    "build": "node ./scripts/write-info && rimraf ./build && tsc",
+    "build:watch": "npm-watch build",
+    "version": "npm run build && git add -A build lib/constants/info.ts",
     "test": "jest",
     "test:watch": "jest --watch",
-    "prepublishOnly": "npm run build",
-    "precommit": "lint-staged"
-  },
-  "lint-staged": {
-    "{src,test}/{,**/}*.ts{,x}": [
-      "prettier --write",
-      "git add"
-    ]
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HarveyD/react-component-library.git"
+    "url": "git+https://github.com/APISuite/apisuite-ui-extension-template"
   },
   "keywords": [
     "React",
     "Component",
     "Library",
-    "Rollup",
     "Typescript",
     "Sass"
   ],
-  "author": "Harvey Delaney",
+  "author": "APISuite",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HarveyD/react-component-library/issues"
+    "url": "https://github.com/APISuite/apisuite-ui-extension-template/issues"
   },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true
-  },
-  "homepage": "https://github.com/HarveyD/react-component-library#readme",
+  "homepage": "https://github.com/APISuite/apisuite-ui-extension-template#readme",
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0",
-    "i18next": ">=19.0.1",
-    "react-i18next": ">=11.2.5"
-  },
-  "dependencies": {
-    "apisuite-extension-ui-types": "github:Cloudoki/apisuite-extension-ui-types#v1.0.1"
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2",
+    "redux": ">=4.0.4",
+    "react-redux": ">=7.1.3",
+    "react-router": ">=5.1.2",
+    "react-router-dom": ">=5.1.2",
+    "redux-saga": ">=1.1.3",
+    "formik": ">=2.2.0",
+    "yup": ">=0.29.3",
+    "@apisuite/fe-base": ">=1.0.0-next.7",
+    "@material-ui/icons": ">=4.5.1",
+    "@material-ui/lab": ">=4.0.0-alpha.56"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.4",
-    "@rollup/plugin-commonjs": "^15.0.0",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^9.0.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^10.4.9",
-    "@types/jest": "^26.0.10",
-    "@types/react": "^16.9.47",
-    "@types/react-dom": "^16.9.8",
-    "@typescript-eslint/eslint-plugin": "^3.10.1",
-    "@typescript-eslint/parser": "^3.10.1",
-    "babel-loader": "^8.1.0",
-    "babel-preset-react-app": "^9.1.2",
-    "eslint": "^7.7.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jest": "^23.20.0",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.6",
-    "eslint-plugin-react-hooks": "^4.1.0",
-    "i18next": "^19.6.0",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^26.4.2",
-    "lint-staged": "^10.2.12",
-    "node-sass": "^4.14.1",
-    "prettier": "^2.1.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-i18next": "^11.7.0",
-    "rollup": "^2.26.5",
-    "rollup-plugin-copy": "^3.3.0",
-    "rollup-plugin-peer-deps-external": "^2.2.3",
-    "rollup-plugin-postcss": "^3.1.6",
-    "rollup-plugin-typescript2": "^0.27.2",
-    "sass-loader": "^10.0.1",
-    "ts-jest": "^26.2.0",
-    "typescript": "^4.0.2"
+    "@apisuite/extension-ui-types": "1.0.5",
+    "@apisuite/fe-base": "1.0.0-next.7",
+    "@babel/core": "7.11.4",
+    "@material-ui/icons": "4.5.1",
+    "@material-ui/lab": "4.0.0-alpha.56",
+    "@testing-library/jest-dom": "5.11.4",
+    "@testing-library/react": "10.4.9",
+    "@types/jest": "26.0.10",
+    "@types/react": "16.9.47",
+    "@types/react-dom": "16.9.8",
+    "axios": "0.21.1",
+    "babel-loader": "8.1.0",
+    "babel-preset-react-app": "9.1.2",
+    "currency-symbol-map": "5.0.1",
+    "formik": "2.2.0",
+    "identity-obj-proxy": "3.0.0",
+    "immutability-helper": "3.1.1",
+    "jest": "26.4.2",
+    "node-sass": "4.14.1",
+    "npm-watch": "0.9.0",
+    "react": "17.0.2",
+    "react-copy-to-clipboard": "5.0.3",
+    "react-dom": "17.0.2",
+    "react-redux": "7.1.3",
+    "react-router": "5.1.2",
+    "react-router-dom": "5.1.2",
+    "redux": "4.0.4",
+    "redux-saga": "1.1.3",
+    "sass-loader": "10.0.1",
+    "ts-jest": "26.2.0",
+    "typescript": "4.1.3",
+    "yup": "0.29.3"
+  },
+  "dependencies": {
+    "clsx": "1.1.1"
   }
 }
