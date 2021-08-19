@@ -30,6 +30,15 @@ The **Sections** hook makes it possible to add new sections to pre-defined regio
 
 Check the `hooks/sections.ts` for an example.
 
+#### Important side note
+
+Throughout your UI Extension's development experience, you may run into the following:
+
+- [API Suite's UI Extension Type Definitions](https://sass-lang.com/), an API Suite library that provides static typing support solely for UI Extension developers.
+- [API Suite's FE Base](https://www.typescriptlang.org/), a front-end provider for API Suite's settings, styles, and translations.
+
+Feel free to read - and suggest improvements! - the documentation of both repositories for more information on the whys and hows of each.
+
 ### Locally using the UI Extension
 
 While developing a UI Extension, you might want to test it in API Suite's Portal. To do so, you must build it, and then install it in the Portal.
