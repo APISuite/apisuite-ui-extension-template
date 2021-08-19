@@ -37,15 +37,5 @@ function getApiUrl() {
   return process.env.API_URL || ''
 }
 
-function getBillingApiUrl() {
-  if (IS_CLOUD) {
-    const apiHostname = hostname.replace('.', '-billing-api.')
-    return `https://${apiHostname}`
-  }
-
-  return process.env.BILLING_API_URL || ''
-}
-
 export const API_URL = getApiUrl()
-export const BILLING_API_URL = getBillingApiUrl()
 export const INFORM_URL = process.env.INFORM_URL || ''

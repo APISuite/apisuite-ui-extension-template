@@ -17,7 +17,9 @@ const AdditionalInfo: React.FC = () => {
 
       <p>
         {t('homepage.extensionSection.configValue', {
-          value: 'apiSuiteExtension12345!',
+          value:
+            `Some value that you might've passed up on the extension's config,
+            which will be interpolated into this translation string`,
         })}
       </p>
     </div>
