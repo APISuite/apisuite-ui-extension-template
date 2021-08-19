@@ -42,7 +42,7 @@ To prep your UI Extension for Portal use, run the following command:
 npm run build
 ```
 
-To allow for the Portal to react to UI Extension changes, run the following command, as it automatically generates a new build upon detecting changes:
+To allow for the Portal to react to UI Extension changes, run the following command, as it automatically generates a new build upon detecting said changes:
 
 ```
 npm run build:watch
@@ -58,7 +58,7 @@ To install your UI Extension in the Portal, you need to run the following comman
 npm i --save "path-to-extension-folder/dev-symlink-target"
 ```
 
-The reason for referencing the `dev-symlink-target` folder is because `dev-symlink-target` itself only references the `package.json` file, and the `build` folder. It leaves the `node_modules` folder out, which allows us to use the same React instance that is installed by the API Suite's Portal for both the portal **and** the extension.
+The reason for referencing the `dev-symlink-target` folder is because `dev-symlink-target` itself only references the `package.json` file and the `build` folder. It leaves the `node_modules` folder out of the equation, which allows us to use the same React instance that is installed by API Suite's Portal for both the portal **and** the extension.
 
 ### Testing
 
