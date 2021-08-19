@@ -20,7 +20,7 @@ Check the `hooks/menu.ts` file for an example.
 
 #### Pages
 
-The **Pages** hook makes it possible to **add** new pages - with any given URI - to the Portal.
+The **Pages** hook makes it possible to add new pages - with any given URI - to the Portal.
 
 Check the `hooks/pages.ts` file for an example.
 
@@ -95,7 +95,7 @@ npm i --save github:Cloudoki/apisuite-ui-extension-template#branch-name
 
 ## Acknowledgments
 
-The repository is based on a stripped-down version of a React Component Library project skeleton. For more info on it:
+This repository is based on a stripped-down version of a React Component Library project skeleton. For more info on it:
 
 * [Repo](https://github.com/HarveyD/react-component-library)
 * [Blog post](https://blog.harveydelaney.com/creating-your-own-react-component-library/)
