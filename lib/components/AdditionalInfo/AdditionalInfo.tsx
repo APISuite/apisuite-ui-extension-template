@@ -16,10 +16,13 @@ const AdditionalInfo: React.FC = () => {
       <p>{t('homepage.extensionSection.paragraph')}</p>
 
       <p>
+        {/* The following translation uses interpolation (https://www.i18next.com/translation-function/interpolation),
+        which allows us to pass dynamic values into translations.
+        
+        These dynamic values can be something that you've passed up on the UI Extension's configuration,
+        or something else entirely. */}
         {t('homepage.extensionSection.configValue', {
-          value:
-            `Some value that you might've passed up on the extension's config,
-            which will be interpolated into this translation string`,
+          value: "API Suite Portal's UI Extension Template",
         })}
       </p>
     </div>
