@@ -32,12 +32,12 @@ Check the `hooks/sections.ts` for an example.
 
 #### Important side note
 
-Throughout your UI Extension's development experience, you may run into the following:
+While developing UI Extensions, you may run into the following:
 
-- [API Suite's UI Extension Type Definitions](https://sass-lang.com/), an API Suite library that provides static typing support solely for UI Extension developers.
-- [API Suite's FE Base](https://www.typescriptlang.org/), a front-end provider for API Suite's settings, styles, and translations.
+- [API Suite's UI Extension Type Definitions](https://github.com/APISuite/apisuite-extension-ui-types), an API Suite library that provides static typing support solely for UI Extension developers.
+- [API Suite's FE Base](https://github.com/APISuite/fe-base), a front-end provider for API Suite's settings, styles, and translations.
 
-Feel free to read - and suggest improvements! - the documentation of both repositories for more information on the whys and hows of each.
+Feel free to read up - and suggest improvements on - the documentation of both repositories for more information on the whys and hows of each.
 
 ### Locally using the UI Extension
 
